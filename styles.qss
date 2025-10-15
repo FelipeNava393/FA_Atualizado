@@ -1,0 +1,65 @@
+/* Global dark theme with subtle accents */
+QWidget {
+  background-color: #0f1115;
+  color: #e6e6e6;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 13px;
+}
+
+QLabel#appTitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+QPushButton {
+  background-color: #1a1d24;
+  border: 1px solid #232733;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+QPushButton:hover { background-color: #202431; }
+QPushButton:pressed { background-color: #161922; }
+QPushButton[primary="true"] {
+  background-color: #2f6feb;
+  border-color: #2f6feb;
+  color: white;
+}
+
+QLineEdit, QComboBox, QDateEdit, QListWidget, QTableWidget, QTextEdit {
+  background-color: #12141b;
+  border: 1px solid #252a36;
+  border-radius: 6px;
+  padding: 4px 6px;
+  selection-background-color: #2f6feb;
+}
+
+QHeaderView::section {
+  background-color: #151824;
+  color: #c8c8c8;
+  padding: 6px;
+  border: none;
+  border-bottom: 1px solid #252a36;
+}
+
+QTableWidget {
+  gridline-color: #252a36;
+  selection-background-color: #2f6feb;
+}
+
+QSplitter::handle {
+  background-color: #1a1d24;
+}
+
+QListWidget::item:selected {
+  background-color: #2f6feb;
+  color: white;
+}
+
+#kpiCard {
+  background-color: #12141b;
+  border: 1px solid #202431;
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+#kpiValue { font-size: 18px; font-weight: 700; }
+#kpiLabel { font-size: 11px; color: #9aa4b2; }
