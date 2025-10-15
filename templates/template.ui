@@ -75,7 +75,19 @@
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
+    <property name="sizes">
+     <list>
+      <number>280</number>
+      <number>920</number>
+     </list>
+    </property>
      <widget class="QWidget" name="leftPanel">
+     <property name="minimumSize">
+      <size>
+       <width>220</width>
+       <height>0</height>
+      </size>
+     </property>
       <layout class="QVBoxLayout" name="leftLayout">
        <item>
         <widget class="QLabel" name="list_label">
@@ -114,6 +126,9 @@
      </widget>
      <widget class="QWidget" name="rightPanel">
       <layout class="QVBoxLayout" name="rightLayout">
+       <property name="stretch">
+        <string>0,10,1</string>
+       </property>
        <item>
         <layout class="QHBoxLayout" name="kpisLayout">
          <item>
@@ -174,20 +189,32 @@
        </item>
        <item>
         <widget class="QWidget" name="grafico_placeholder">
-         <property name="minimumSize">
-          <size>
-           <width>300</width>
-           <height>280</height>
-          </size>
-         </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>1</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>400</width>
+          <height>420</height>
+         </size>
+        </property>
         </widget>
        </item>
        <item>
         <widget class="QTableWidget" name="fa_table">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>300</width>
-           <height>200</height>
+          <height>140</height>
           </size>
          </property>
         </widget>
