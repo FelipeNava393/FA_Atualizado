@@ -13,7 +13,6 @@ from PyQt6.QtWidgets import (
     QApplication,
     QFileDialog,
     QLabel,
-    QLineEdit,
     QListWidgetItem,
     QTableWidgetItem,
     QVBoxLayout,
