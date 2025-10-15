@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_root">
+   <item>
+    <layout class="QHBoxLayout" name="headerLayout">
+     <item>
+      <widget class="QLabel" name="appTitle">
+       <property name="text">
+        <string>Fator de Alavancagem - Dashboard</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="search_input">
+       <property name="placeholderText"><string>Pesquisar...</string></property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_condition_filtro">
+       <property name="text">
+        <string>Nenhum filtro aplicado</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDateEdit" name="date_from">
+       <property name="calendarPopup"><bool>true</bool></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDateEdit" name="date_to">
+       <property name="calendarPopup"><bool>true</bool></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="chart_selector"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="export_csv_btn">
+       <property name="text"><string>Exportar CSV</string></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="export_excel_btn">
+       <property name="text"><string>Exportar Excel</string></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QWidget" name="leftPanel">
+      <layout class="QVBoxLayout" name="leftLayout">
+       <item>
+        <widget class="QLabel" name="list_label">
+         <property name="text"><string>Contrapartes</string></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListWidget" name="list_contrapartes"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="filterButtonsLayout">
+         <item>
+          <widget class="QPushButton" name="aplicar_filtro_btn">
+           <property name="text"><string>Aplicar Filtro</string></property>
+           <property name="toolTip"><string>Aplicar filtro selecionado</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="limpar_filtro_btn">
+           <property name="text"><string>Limpar</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="select_all_btn">
+           <property name="text"><string>Selecionar Tudo</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="clear_list_btn">
+           <property name="text"><string>Limpar Seleção</string></property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="rightPanel">
+      <layout class="QVBoxLayout" name="rightLayout">
+       <item>
+        <layout class="QHBoxLayout" name="kpisLayout">
+         <item>
+          <widget class="QFrame" name="kpi_avg" native="true">
+           <property name="objectName"><string>kpiCard</string></property>
+           <layout class="QVBoxLayout" name="kpi_avg_layout">
+            <item><widget class="QLabel" name="kpi_avg_value"><property name="objectName"><string>kpiValue</string></property><property name="text"><string>-</string></property></widget></item>
+            <item><widget class="QLabel" name="kpi_avg_label"><property name="objectName"><string>kpiLabel</string></property><property name="text"><string>Média FA (%)</string></property></widget></item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="kpi_median" native="true">
+           <property name="objectName"><string>kpiCard</string></property>
+           <layout class="QVBoxLayout" name="kpi_median_layout">
+            <item><widget class="QLabel" name="kpi_median_value"><property name="objectName"><string>kpiValue</string></property><property name="text"><string>-</string></property></widget></item>
+            <item><widget class="QLabel" name="kpi_median_label"><property name="objectName"><string>kpiLabel</string></property><property name="text"><string>Mediana FA (%)</string></property></widget></item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="kpi_min" native="true">
+           <property name="objectName"><string>kpiCard</string></property>
+           <layout class="QVBoxLayout" name="kpi_min_layout">
+            <item><widget class="QLabel" name="kpi_min_value"><property name="objectName"><string>kpiValue</string></property><property name="text"><string>-</string></property></widget></item>
+            <item><widget class="QLabel" name="kpi_min_label"><property name="objectName"><string>kpiLabel</string></property><property name="text"><string>Mínimo FA (%)</string></property></widget></item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="kpi_max" native="true">
+           <property name="objectName"><string>kpiCard</string></property>
+           <layout class="QVBoxLayout" name="kpi_max_layout">
+            <item><widget class="QLabel" name="kpi_max_value"><property name="objectName"><string>kpiValue</string></property><property name="text"><string>-</string></property></widget></item>
+            <item><widget class="QLabel" name="kpi_max_label"><property name="objectName"><string>kpiLabel</string></property><property name="text"><string>Máximo FA (%)</string></property></widget></item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="kpi_count" native="true">
+           <property name="objectName"><string>kpiCard</string></property>
+           <layout class="QVBoxLayout" name="kpi_count_layout">
+            <item><widget class="QLabel" name="kpi_count_value"><property name="objectName"><string>kpiValue</string></property><property name="text"><string>-</string></property></widget></item>
+            <item><widget class="QLabel" name="kpi_count_label"><property name="objectName"><string>kpiLabel</string></property><property name="text"><string>Nº Registros</string></property></widget></item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="kpi_last" native="true">
+           <property name="objectName"><string>kpiCard</string></property>
+           <layout class="QVBoxLayout" name="kpi_last_layout">
+            <item><widget class="QLabel" name="kpi_last_value"><property name="objectName"><string>kpiValue</string></property><property name="text"><string>-</string></property></widget></item>
+            <item><widget class="QLabel" name="kpi_last_label"><property name="objectName"><string>kpiLabel</string></property><property name="text"><string>Última Data</string></property></widget></item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QWidget" name="grafico_placeholder">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>280</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="fa_table">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>200</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
